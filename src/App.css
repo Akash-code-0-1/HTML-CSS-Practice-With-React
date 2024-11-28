@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 247, 247);
+}
+
+.App .title {
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 5px;
+}
+
+.App .tags {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
+
+
+.App .tags span {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 22px;
+    font: bold;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: green;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font: bold;
+}
+
+footer ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: small;
+
+}
