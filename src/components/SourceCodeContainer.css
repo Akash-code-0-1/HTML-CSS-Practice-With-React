@@ -35,14 +35,14 @@
 
 .toggle-icon {
     position: absolute;
-    bottom: -15px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 10px;
     cursor: pointer;
     transition: color 0.3s;
     background-color: white;
-    padding: 2px 3px;
+    padding: 1px 3px;
     border-radius: 50%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

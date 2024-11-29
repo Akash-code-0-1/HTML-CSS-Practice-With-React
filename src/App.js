@@ -2,6 +2,8 @@ import Heading from './components/Heading';
 import Paragraph from './components/Paragraph';
 import Image from './components/Image';
 import Media from './components/Media';
+import Table from './components/Table';
+import Layout from './components/Layout';
 import './App.css';
 
 function App() {
@@ -27,6 +29,16 @@ function App() {
       <div className='tags'>
         <span>Meadia tag</span>
         <Media />
+      </div>
+
+      <div className='tags'>
+        <span>HTML Table</span>
+        <Table />
+      </div>
+
+      <div className='tags'>
+        <span>Layout</span>
+        <Layout />
       </div>
 
 
