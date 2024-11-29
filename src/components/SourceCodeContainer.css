@@ -7,7 +7,8 @@
 
 .container {
     display: block;
-    height: 200px;
+    max-height: 500px;
+    overflow: scroll; /* Maintain scrolling functionality */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 10px;
     border-radius: 10px;
@@ -15,7 +16,14 @@
     transition: border-bottom 0.3s ease;
     position: relative;
     border-bottom: 3px solid transparent;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
+
+.container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
 
 .container:hover {
     border-bottom: 5px solid green;
@@ -52,6 +60,8 @@
 }
 
 .source-code {
+    max-height: 500px;
+    overflow: hidden; /* Initially hide the scrollbar */
     margin-top: 15px;
     padding: 10px;
     background-color: black;
@@ -59,8 +69,39 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     border-radius: 5px;
-    overflow: auto;
+    transition: all 0.3s ease; /* Smooth transition */
 }
+
+.source-code:hover {
+    overflow: scroll; /* Show the scrollbar on hover */
+}
+
+.source-code::-webkit-scrollbar {
+    width: 6px; 
+    height: 6px; 
+    opacity: 0; /* Initially hide the scrollbar */
+    transition: opacity 0.3s ease; 
+}
+
+.source-code:hover::-webkit-scrollbar {
+    opacity: 1; 
+}
+
+.source-code::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px; 
+}
+
+.source-code::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; 
+}
+
+.source-code::-webkit-scrollbar-track {
+    background: #222; 
+}
+
+
+
 
 
 .source-code .tabs .copybutton{

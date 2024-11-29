@@ -1,5 +1,7 @@
 import Heading from './components/Heading';
 import Paragraph from './components/Paragraph';
+import Image from './components/Image';
+import Media from './components/Media';
 import './App.css';
 
 function App() {
@@ -16,6 +18,18 @@ function App() {
         <span>HTML Paragraphs</span>
         <Paragraph />
       </div>
+
+      <div className='tags'>
+        <span>HTML Images</span>
+        <Image />
+      </div>
+
+      <div className='tags'>
+        <span>Meadia tag</span>
+        <Media />
+      </div>
+
+
 
       <footer>
         <p>&copy; 2024 JuNnOs TiMe</p>

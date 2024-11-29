@@ -25,12 +25,7 @@ export default function SourceCodeContainer({ children, sourceCode }) {
         <div className="content-container">
             <div className={`container ${showSource ? 'show-border' : ''}`}>
                 {children}
-                <div
-                    className={`toggle-icon ${showSource ? 'hide' : 'show'}`}
-                    onClick={toggleSourceCode}
-                >
-                    {showSource ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                </div>
+                
             </div>
             {showSource && (
                 <div className="source-code">
@@ -59,6 +54,12 @@ export default function SourceCodeContainer({ children, sourceCode }) {
                     </pre>
                 </div>
             )}
+            <div
+                className={`toggle-icon ${showSource ? 'hide' : 'show'}`}
+                onClick={toggleSourceCode}
+            >
+                {showSource ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            </div>
         </div>
     );
 }

@@ -1,0 +1,63 @@
+.img_tag {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.img_tag .images{
+    display: flex;
+    justify-content: space-around;
+}
+.img_tag .images img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.img_tag .with_bg_img {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    position: relative;
+    padding: 20px;
+    margin: 20px auto; 
+    width: 90%;
+    border-radius: 5px;
+    overflow: hidden; /* Prevents blur from spilling outside */
+}
+
+.img_tag .with_bg_img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(4px); /* Apply blur only to the pseudo-element (background) */
+    z-index: 1;
+}
+
+.img_tag .with_bg_img > .image {
+    position: relative;
+    z-index: 2; /* Ensure images stay above the blurred background */
+    margin: 10px; /* Add space between images */
+    height: 100px;
+    width: 100px;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.img_tag .with_bg_img > .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    border-radius: 5px;
+}
